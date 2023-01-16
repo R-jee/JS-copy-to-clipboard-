@@ -1,0 +1,12 @@
+function copy_redirectURI(input_id, btn_id) {
+    var kakao_redirect_uri = document.getElementById(input_id);
+    var kakao_redirect_uri_copy = document.getElementById(btn_id);
+    kakao_redirect_uri_copy.onclick = function() {
+        kakao_redirect_uri.select();
+        document.execCommand("copy");
+        kakao_redirect_uri_copy.innerText = "Copied"
+        setTimeout(() => {
+            kakao_redirect_uri_copy.innerText = "Copy"
+        }, 1000);
+    }
+}
